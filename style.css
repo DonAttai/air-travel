@@ -112,6 +112,7 @@ ul li {
 
 .hamburger {
   display: none;
+  cursor: pointer;
 }
 
 .bar {
@@ -221,12 +222,13 @@ ul li {
     gap: 20px;
     font-size: 36px;
     background-color: lightblue;
-    padding: 50px 16px;
+    padding: 50px;
+    transition: 0.3s;
   }
 
   .nav-items li {
     font-size: 12px;
-    color: whitesmoke;
+    color: black;
   }
 
   .nav-items.active {
