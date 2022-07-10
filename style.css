@@ -1,0 +1,268 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+  color: gray;
+  font-weight: 700;
+}
+
+/* header */
+.header {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  background-color: lightblue;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: 0.5px solid #eee;
+}
+
+.logo {
+  font-size: 16px;
+  color: rgba(199, 23, 23, 0.822);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.search {
+  min-width: 0;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.search form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2px 5px;
+  background-color: transparent;
+}
+.search img {
+  height: 18px;
+  cursor: pointer;
+}
+.search button {
+  background-color: transparent;
+  border: none;
+}
+.search input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  min-width: 0;
+}
+.search input::placeholder {
+  font-size: 10.5px;
+}
+.nav-items li {
+  font-size: 8.5px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  min-height: 20px;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.feature img {
+  height: 18px;
+}
+.feature p {
+  font-size: 8px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  margin: 3px;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* main */
+.container {
+  max-width: 1240px;
+  padding: 20px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  width: 175px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 30px;
+  flex-basis: auto;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  transition: 0.7s;
+}
+
+.card-image:hover {
+  transform: scale(1.5);
+}
+
+.star {
+  height: 14px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-details {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-title span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title p {
+  font-weight: 900;
+}
+
+/* popular */
+#listings {
+  min-height: 50vh;
+}
+#featured {
+  min-height: 50vh;
+}
+#popular {
+  min-height: 50vh;
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    margin: 0 auto;
+    padding: 0 130px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-items {
+    position: fixed;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    gap: 20px;
+    font-size: 36px;
+    background-color: lightblue;
+    padding: 50px 16px;
+  }
+
+  .nav-items li {
+    font-size: 12px;
+    color: whitesmoke;
+  }
+
+  .nav-items.active {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .search {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    right: 10px;
+  }
+  .header {
+    margin-bottom: 30px;
+    border: none;
+    position: sticky;
+    background-color: lightblue;
+    padding: 0;
+    top: 0;
+    z-index: 5;
+  }
+  .navbar {
+    border: none;
+  }
+
+  .navbar .logo,
+  .navbar .hamburger {
+    padding: 0 10px;
+  }
+
+  .features {
+    border-top: 0.5px solid #eee;
+    margin-top: 30px;
+  }
+  .feature {
+    padding: 10px 0;
+  }
+}
